@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【ユニバ🌎️】ワイワイし隊🎉 メンバー名簿</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg:#f7f6f2;
+    --surface:#ffffff;
+    --accent:#ff6b35;
+    --accent2:#ffd166;
+    --text:#1a1a1a;
+    --text2:#666;
+    --border:#e0ddd8;
+    --radius:14px;
+    --radius-sm:8px;
+  }
+  body{background:var(--bg);color:var(--text);font-family:'Noto Sans JP',sans-serif;min-height:100vh;padding:24px 16px 60px}
+  .container{max-width:720px;margin:0 auto}
+  .hero{text-align:center;padding:28px 0 20px}
+  .hero-emoji{font-size:44px;display:block;margin-bottom:8px;animation:bounce 2s infinite}
+  @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+  .hero h1{font-size:20px;font-weight:700;line-height:1.4}
+  .hero p{font-size:13px;color:var(--text2);margin-top:6px}
+  .top-bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:8px}
+  .member-count{font-size:14px;color:var(--text2)}
+  .member-count strong{color:var(--accent);font-size:18px}
+  .btn-refresh{
+    padding:8px 16px;border-radius:20px;border:1px solid var(--accent);
+    background:#fff;color:var(--accent);font-size:13px;font-weight:500;
+    font-family:'Noto Sans JP',sans-serif;cursor:pointer;transition:all 0.15s;
+  }
+  .btn-refresh:hover{background:var(--accent);color:#fff}
+  .filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+  .filters select{
+    padding:8px 12px;border-radius:20px;border:1px solid var(--border);
+    background:#fff;font-size:13px;font-family:'Noto Sans JP',sans-serif;
+    color:var(--text);outline:none;cursor:pointer;transition:border-color 0.15s;
+  }
+  .filters select:focus{border-color:var(--accent)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+  .mcard{
+    background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+    padding:16px;transition:box-shadow 0.15s;
+  }
+  .mcard:hover{box-shadow:0 4px 16px rgba(0,0,0,0.08)}
+  .card-top{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+  .avatar{
+    width:44px;height:44px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-size:16px;font-weight:700;flex-shrink:0;
+  }
+  .card-name{font-size:15px;font-weight:700;color:var(--text)}
+  .card-area{font-size:12px;color:var(--text2);margin-top:2px}
+  .card-row{display:flex;gap:8px;margin-bottom:6px;align-items:flex-start;font-size:13px}
+  .card-row:last-child{margin-bottom:0}
+  .clabel{color:var(--text2);min-width:48px;flex-shrink:0;padding-top:1px;font-size:12px}
+  .cval{color:var(--text);line-height:1.5}
+  .tags{display:flex;flex-wrap:wrap;gap:4px}
+  .tag{font-size:11px;padding:3px 9px;border-radius:20px;background:var(--bg);color:var(--text2);border:1px solid var(--border)}
+  .tag-uniba{background:#fff8f0;color:#c45000;border-color:#ffd0b5}
+  .ticket-badge{
+    display:inline-block;font-size:11px;padding:3px 10px;
+    border-radius:20px;font-weight:500;margin-bottom:10px;
+  }
+  .t-fixed{background:#e8f7f0;color:#1a7a4a}
+  .t-open{background:#f0eeff;color:#5b3fc4}
+  .t-none{background:var(--bg);color:var(--text2);border:1px solid var(--border)}
+  .msg-box{
+    background:var(--bg);border-radius:var(--radius-sm);
+    padding:10px 12px;font-size:13px;color:var(--text2);
+    margin-top:10px;line-height:1.7;
+    border-left:3px solid var(--accent2);
+  }
+  .divider{border:none;border-top:1px solid var(--border);margin:10px 0}
+  .empty{
+    text-align:center;padding:48px 16px;
+    color:var(--text2);font-size:14px;grid-column:1/-1;
+  }
+  .empty-emoji{font-size:40px;display:block;margin-bottom:12px}
+  .link-form{
+    display:inline-block;margin-top:16px;padding:10px 20px;
+    border-radius:20px;background:var(--accent);color:#fff;
+    text-decoration:none;font-size:13px;font-weight:500;
+  }
+  @media(max-width:480px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="hero">
+    <span class="hero-emoji">🌎️</span>
+    <h1>【ユニバ🌎️】ワイワイし隊🎉<br>メンバー名簿</h1>
+    <p>登録メンバー一覧です。絞り込んで交流のきっかけを見つけよう！</p>
+  </div>
+
+  <div class="top-bar">
+    <div class="member-count">メンバー <strong id="count">0</strong> 人</div>
+    <button class="btn-refresh" onclick="loadMembers()">更新する</button>
+  </div>
+
+  <div class="filters">
+    <select id="f-area" onchange="render()">
+      <option value="">エリア: すべて</option>
+      <option>北海道・東北</option><option>関東</option><option>中部・東海</option>
+      <option>近畿（関西）</option><option>中国・四国</option><option>九州・沖縄</option><option>海外</option>
+    </select>
+    <select id="f-job" onchange="render()">
+      <option value="">職業: すべて</option>
+      <option>会社員（副業なし）</option><option>会社員＋副業</option>
+      <option>フリーランス・個人事業主</option><option>経営者・起業家</option>
+      <option>投資家</option><option>学生</option><option>その他</option>
+    </select>
+    <select id="f-interest" onchange="render()">
+      <option value="">興味: すべて</option>
+      <option>投資・資産運用</option><option>AI</option><option>家計管理</option>
+      <option>スポーツ</option><option>宿題リスト</option><option>ブログ・ライター</option>
+      <option>動画・SNS</option><option>プログラミング</option><option>デザイン</option>
+      <option>物販・EC</option><option>コンサル・コーチング</option><option>読書・勉強</option>
+    </select>
+    <select id="f-ticket" onchange="render()">
+      <option value="">チケット: すべて</option>
+      <option>あり（メンバー決まってる）</option>
+      <option>あり（メンバー決まってない）</option>
+      <option>なし</option>
+    </select>
+    <select id="f-style" onchange="render()">
+      <option value="">まわり方: すべて</option>
+      <option>ガチ勢（全アトラクション制覇）</option>
+      <option>ゆったり派（並ばず雰囲気重視）</option>
+      <option>グルメ重視</option><option>写真・フォト重視</option>
+      <option>ショー・パレード重視</option><option>みんなに合わせる</option>
+    </select>
+  </div>
+
+  <div class="grid" id="grid">
+    <div class="empty">
+      <span class="empty-emoji">🎢</span>
+      まだメンバーが登録されていません。<br>自己紹介フォームから登録してみよう！
+    </div>
+  </div>
+</div>
+
+<script>
+const KEY = 'uniba_members_v1';
+const COLORS = [
+  {bg:'#fde8e0',text:'#c45000'},
+  {bg:'#e0f0fd',text:'#1a5fa0'},
+  {bg:'#e8f7f0',text:'#1a7a4a'},
+  {bg:'#f5eeff',text:'#5b3fc4'},
+  {bg:'#fff3d6',text:'#8a6200'},
+  {bg:'#fce8f0',text:'#a0245a'},
+];
+let allMembers = [];
+
+function getColor(name){
+  let h=0;
+  for(let c of name) h=(h*31+c.charCodeAt(0))&0xfffff;
+  return COLORS[h%COLORS.length];
+}
+function initial(name){
+  if(!name) return '?';
+  const ch=[...name];
+  return /[\u3000-\u9fff]/.test(ch[0])?ch[0]:ch[0].toUpperCase();
+}
+function ticketClass(t){
+  if(t==='あり（メンバー決まってる）') return 't-fixed';
+  if(t==='あり（メンバー決まってない）') return 't-open';
+  return 't-none';
+}
+function ticketLabel(t){
+  if(t==='あり（メンバー決まってる）') return '🎟 チケットあり・確定';
+  if(t==='あり（メンバー決まってない）') return '🎟 チケットあり・募集中';
+  if(t==='なし') return 'チケットなし';
+  return '';
+}
+
+function loadMembers(){
+  try{
+    allMembers = JSON.parse(localStorage.getItem(KEY) || '[]');
+  }catch(e){allMembers=[];}
+  render();
+}
+
+function render(){
+  const area = document.getElementById('f-area').value;
+  const job = document.getElementById('f-job').value;
+  const interest = document.getElementById('f-interest').value;
+  const ticket = document.getElementById('f-ticket').value;
+  const style = document.getElementById('f-style').value;
+
+  const list = allMembers.filter(m=>{
+    if(area && m.area!==area) return false;
+    if(job && m.job_category!==job) return false;
+    if(interest && !(m.interests||[]).includes(interest)) return false;
+    if(ticket && m.ticket!==ticket) return false;
+    if(style && !(m.styles||[]).includes(style)) return false;
+    return true;
+  });
+
+  document.getElementById('count').textContent = list.length;
+  const grid = document.getElementById('grid');
+
+  if(list.length===0){
+    grid.innerHTML = `<div class="empty"><span class="empty-emoji">🎢</span>条件に一致するメンバーが見つかりません</div>`;
+    return;
+  }
+
+  grid.innerHTML = list.map(m=>{
+    const col = getColor(m.nickname);
+    const interestTags = (m.interests||[]).map(s=>`<span class="tag">${s}</span>`).join('');
+    const styleTags = (m.styles||[]).map(s=>`<span class="tag tag-uniba">${s}</span>`).join('');
+    const tb = m.ticket ? `<div><span class="ticket-badge ${ticketClass(m.ticket)}">${ticketLabel(m.ticket)}</span></div>` : '';
+    return `
+    <div class="mcard">
+      <div class="card-top">
+        <div class="avatar" style="background:${col.bg};color:${col.text}">${initial(m.nickname)}</div>
+        <div>
+          <div class="card-name">${m.nickname}</div>
+          <div class="card-area">📍 ${m.area||''}</div>
+          ${m.profile_url?`<a href="${m.profile_url}" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;margin-top:2px;display:inline-block;">🔗 リベシティプロフィール</a>`:''}
+        </div>
+      </div>
+      ${tb}
+      ${m.job_category?`<div class="card-row"><span class="clabel">職業</span><span class="cval">${m.job_category}</span></div>`:''}
+      ${m.activity?`<div class="card-row"><span class="clabel">副業</span><span class="cval">${m.activity}</span></div>`:''}
+      ${interestTags?`<div class="card-row"><span class="clabel">興味</span><div class="tags">${interestTags}</div></div>`:''}
+      ${styleTags?`<hr class="divider"><div class="card-row"><span class="clabel">まわり方</span><div class="tags">${styleTags}</div></div>`:''}
+      ${m.message?`<div class="msg-box">${m.message}</div>`:''}
+    </div>`;
+  }).join('');
+}
+
+loadMembers();
+</script>
+</body>
+</html>
