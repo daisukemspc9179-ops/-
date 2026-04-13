@@ -212,8 +212,10 @@ function render(){
   grid.innerHTML = list.map(m=>{
     const col = getColor(m.nickname);
     const interestTags = (m.interests||[]).map(s=>`<span class="tag">${s}</span>`).join('');
+    const officeTags = (m.offices||[]).map(s=>`<span class="tag">${s}</span>`).join('');
     const styleTags = (m.styles||[]).map(s=>`<span class="tag tag-uniba">${s}</span>`).join('');
     const tb = m.ticket ? `<div><span class="ticket-badge ${ticketClass(m.ticket)}">${ticketLabel(m.ticket)}</span></div>` : '';
+    const nenpassLabel = m.nenpass ? `<div class="card-row"><span class="clabel">年パス</span><span class="cval">${m.nenpass}</span></div>` : '';
     return `
     <div class="mcard">
       <div class="card-top">
@@ -224,7 +226,9 @@ function render(){
           ${m.profile_url?`<a href="${m.profile_url}" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;margin-top:2px;display:inline-block;">🔗 リベシティプロフィール</a>`:''}
         </div>
       </div>
+      ${officeTags?`<div class="card-row"><span class="clabel">オフィス</span><div class="tags">${officeTags}</div></div>`:''}
       ${tb}
+      ${nenpassLabel}
       ${m.job_category?`<div class="card-row"><span class="clabel">職業</span><span class="cval">${m.job_category}</span></div>`:''}
       ${m.activity?`<div class="card-row"><span class="clabel">副業</span><span class="cval">${m.activity}</span></div>`:''}
       ${interestTags?`<div class="card-row"><span class="clabel">興味</span><div class="tags">${interestTags}</div></div>`:''}

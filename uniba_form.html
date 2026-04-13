@@ -114,6 +114,27 @@
       </div>
     </div>
     <div class="field" style="margin-top:14px">
+      <label>よく行くオフィス</label>
+      <div class="badge-group" id="office-group">
+        <label class="badge"><input type="checkbox" value="札幌">札幌</label>
+        <label class="badge"><input type="checkbox" value="宮城">宮城</label>
+        <label class="badge"><input type="checkbox" value="新宿西口">新宿西口</label>
+        <label class="badge"><input type="checkbox" value="新橋">新橋</label>
+        <label class="badge"><input type="checkbox" value="池袋">池袋</label>
+        <label class="badge"><input type="checkbox" value="立川">立川</label>
+        <label class="badge"><input type="checkbox" value="横浜">横浜</label>
+        <label class="badge"><input type="checkbox" value="名古屋">名古屋</label>
+        <label class="badge"><input type="checkbox" value="梅田">梅田</label>
+        <label class="badge"><input type="checkbox" value="四ツ橋">四ツ橋</label>
+        <label class="badge"><input type="checkbox" value="京都">京都</label>
+        <label class="badge"><input type="checkbox" value="神戸">神戸</label>
+        <label class="badge"><input type="checkbox" value="広島">広島</label>
+        <label class="badge"><input type="checkbox" value="福岡">福岡</label>
+        <label class="badge"><input type="checkbox" value="oviceオンラインスペース">oviceオンライン</label>
+        <label class="badge"><input type="checkbox" value="まだない">まだない</label>
+      </div>
+    </div>
+    <div class="field" style="margin-top:14px">
       <label>リベシティ プロフィールURL</label>
       <input type="text" id="profile_url" placeholder="https://my.community.camp/users/..." maxlength="300">
       <p style="font-size:11px;color:var(--text2);margin-top:4px">リベシティのプロフィールページURLを貼り付けてください</p>
@@ -191,6 +212,31 @@
         </label>
       </div>
     </div>
+    <div class="field" style="margin-top:14px">
+      <label>今回行って年パスに切り替えるか</label>
+      <div class="ticket-group">
+        <label class="ticket-opt">
+          <input type="radio" name="nenpass" value="絶対切り替える！">
+          <div class="tick-dot"></div>
+          <div><div class="tick-title">絶対切り替える！</div></div>
+        </label>
+        <label class="ticket-opt">
+          <input type="radio" name="nenpass" value="迷ってる">
+          <div class="tick-dot"></div>
+          <div><div class="tick-title">迷ってる</div></div>
+        </label>
+        <label class="ticket-opt">
+          <input type="radio" name="nenpass" value="たぶんないかな">
+          <div class="tick-dot"></div>
+          <div><div class="tick-title">たぶんないかな</div></div>
+        </label>
+        <label class="ticket-opt">
+          <input type="radio" name="nenpass" value="ない">
+          <div class="tick-dot"></div>
+          <div><div class="tick-title">ない</div></div>
+        </label>
+      </div>
+    </div>
   </div>
 
   <div class="card">
@@ -214,10 +260,12 @@ const KEY = 'uniba_members_v1';
 document.querySelectorAll('.badge').forEach(b => {
   b.addEventListener('click', () => b.classList.toggle('selected'));
 });
-document.querySelectorAll('.ticket-opt').forEach(opt => {
-  opt.addEventListener('click', () => {
-    document.querySelectorAll('.ticket-opt').forEach(o => o.classList.remove('selected'));
-    opt.classList.add('selected');
+['ticket','nenpass'].forEach(name => {
+  document.querySelectorAll(`input[name="${name}"]`).forEach(radio => {
+    radio.closest('.ticket-opt').addEventListener('click', function(){
+      document.querySelectorAll(`input[name="${name}"]`).forEach(r => r.closest('.ticket-opt').classList.remove('selected'));
+      this.classList.add('selected');
+    });
   });
 });
 document.getElementById('message').addEventListener('input', function(){
@@ -229,15 +277,19 @@ function saveProfile() {
   const area = document.getElementById('area').value;
   if (!nickname || !area) { alert('ニックネームと居住エリアは必須です'); return; }
   const interests = [...document.querySelectorAll('#interest-group input:checked')].map(i => i.value);
+  const offices = [...document.querySelectorAll('#office-group input:checked')].map(i => i.value);
   const styles = [...document.querySelectorAll('#style-group input:checked')].map(i => i.value);
   const ticket = document.querySelector('input[name="ticket"]:checked');
+  const nenpass = document.querySelector('input[name="nenpass"]:checked');
   const profile = {
     id: Date.now(), nickname, area,
+    offices,
     profile_url: document.getElementById('profile_url').value.trim(),
     job_category: document.getElementById('job_category').value,
     activity: document.getElementById('activity').value.trim(),
     interests, styles,
     ticket: ticket ? ticket.value : '',
+    nenpass: nenpass ? nenpass.value : '',
     message: document.getElementById('message').value.trim(),
     registered_at: new Date().toISOString()
   };
@@ -247,7 +299,6 @@ function saveProfile() {
     localStorage.setItem(KEY, JSON.stringify(existing));
     document.getElementById('success-msg').style.display = 'block';
     document.getElementById('success-msg').scrollIntoView({behavior:'smooth'});
-    // フォームリセット
     document.getElementById('nickname').value='';
     document.getElementById('area').value='';
     document.getElementById('profile_url').value='';
