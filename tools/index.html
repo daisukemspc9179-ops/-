@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Claudeãã¼ã«ç½®ãå ´</title>
+  <title>Claudeツール置き場</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -158,14 +158,14 @@
     }
     .filter-btn:hover { border-color: var(--primary); color: var(--primary); }
     .filter-btn.active { background: var(--primary); border-color: var(--primary); color: #fff; }
-    .filter-btn[data-cat="è²©å£²ã»ç©è²©ç³»"].active         { background: var(--cat-1); border-color: var(--cat-1); }
-    .filter-btn[data-cat="çºä¿¡ã»ã¡ãã£ã¢éå¶ç³»"].active  { background: var(--cat-2); border-color: var(--cat-2); }
-    .filter-btn[data-cat="åè¨ã»ä»£è¡ç³»"].active          { background: var(--cat-3); border-color: var(--cat-3); }
-    .filter-btn[data-cat="å¶ä½ã»éçºç³»"].active          { background: var(--cat-4); border-color: var(--cat-4); }
-    .filter-btn[data-cat="æ¯æ´ã»ã³ã³ãµã«ã»éå®¢ç³»"].active { background: var(--cat-5); border-color: var(--cat-5); }
-    .filter-btn[data-cat="çæ´»æ¹åã»å®¶åº­æ´»ç¨ç³»"].active  { background: var(--cat-6); border-color: var(--cat-6); }
-    .filter-btn[data-cat="æè³ã»ãéç³»"].active          { background: var(--cat-7); border-color: var(--cat-7); }
-    .filter-btn[data-cat="ã¨ã³ã¿ã¡ã»ã²ã¼ã ç³»"].active    { background: var(--cat-8); border-color: var(--cat-8); }
+    .filter-btn[data-cat="販売・物販系"].active         { background: var(--cat-1); border-color: var(--cat-1); }
+    .filter-btn[data-cat="発信・メディア運営系"].active  { background: var(--cat-2); border-color: var(--cat-2); }
+    .filter-btn[data-cat="受託・代行系"].active          { background: var(--cat-3); border-color: var(--cat-3); }
+    .filter-btn[data-cat="制作・開発系"].active          { background: var(--cat-4); border-color: var(--cat-4); }
+    .filter-btn[data-cat="支援・コンサル・集客系"].active { background: var(--cat-5); border-color: var(--cat-5); }
+    .filter-btn[data-cat="生活改善・家庭活用系"].active  { background: var(--cat-6); border-color: var(--cat-6); }
+    .filter-btn[data-cat="投資・お金系"].active          { background: var(--cat-7); border-color: var(--cat-7); }
+    .filter-btn[data-cat="エンタメ・ゲーム系"].active    { background: var(--cat-8); border-color: var(--cat-8); }
 
     /* ===== Main ===== */
     main { max-width: 1100px; margin: 0 auto; padding: 28px 20px; }
@@ -243,14 +243,14 @@
       white-space: nowrap;
       color: #fff;
     }
-    .cat-tag[data-cat="è²©å£²ã»ç©è²©ç³»"]         { background: var(--cat-1); }
-    .cat-tag[data-cat="çºä¿¡ã»ã¡ãã£ã¢éå¶ç³»"] { background: var(--cat-2); }
-    .cat-tag[data-cat="åè¨ã»ä»£è¡ç³»"]         { background: var(--cat-3); }
-    .cat-tag[data-cat="å¶ä½ã»éçºç³»"]         { background: var(--cat-4); }
-    .cat-tag[data-cat="æ¯æ´ã»ã³ã³ãµã«ã»éå®¢ç³»"] { background: var(--cat-5); }
-    .cat-tag[data-cat="çæ´»æ¹åã»å®¶åº­æ´»ç¨ç³»"] { background: var(--cat-6); }
-    .cat-tag[data-cat="æè³ã»ãéç³»"]         { background: var(--cat-7); }
-    .cat-tag[data-cat="ã¨ã³ã¿ã¡ã»ã²ã¼ã ç³»"]   { background: var(--cat-8); }
+    .cat-tag[data-cat="販売・物販系"]         { background: var(--cat-1); }
+    .cat-tag[data-cat="発信・メディア運営系"] { background: var(--cat-2); }
+    .cat-tag[data-cat="受託・代行系"]         { background: var(--cat-3); }
+    .cat-tag[data-cat="制作・開発系"]         { background: var(--cat-4); }
+    .cat-tag[data-cat="支援・コンサル・集客系"] { background: var(--cat-5); }
+    .cat-tag[data-cat="生活改善・家庭活用系"] { background: var(--cat-6); }
+    .cat-tag[data-cat="投資・お金系"]         { background: var(--cat-7); }
+    .cat-tag[data-cat="エンタメ・ゲーム系"]   { background: var(--cat-8); }
 
     /* ===== Open Button ===== */
     .open-btn {
@@ -303,7 +303,7 @@
       font-size: .9rem;
     }
 
-    /* ===== Modal (å±é) ===== */
+    /* ===== Modal (共通) ===== */
     .modal-overlay {
       display: none;
       position: fixed;
@@ -377,7 +377,7 @@
       margin-top: 4px;
     }
 
-    /* ===== Setup Modal å°ç¨ ===== */
+    /* ===== Setup Modal 専用 ===== */
     .setup-steps {
       background: var(--bg);
       border-radius: 10px;
@@ -458,28 +458,28 @@
 <header>
   <div class="header-inner">
     <div class="header-top">
-      <h1>ð¤ Claudeãã¼ã«ç½®ãå ´</h1>
+      <h1>🤖 Claudeツール置き場</h1>
       <div class="header-actions">
-        <span class="sync-badge" id="sync-badge"><span class="dot"></span><span id="sync-text">æ¥ç¶ä¸­...</span></span>
-        <button class="btn btn-icon" title="ææ°ãã¼ã¿ã«æ´æ°" onclick="loadData()">ð</button>
-        <button class="btn btn-primary" id="add-btn" onclick="openModal()" style="display:none">ï¼ ãã¼ã«ãè¿½å </button>
+        <span class="sync-badge" id="sync-badge"><span class="dot"></span><span id="sync-text">接続中...</span></span>
+        <button class="btn btn-icon" title="最新データに更新" onclick="loadData()">🔄</button>
+        <button class="btn btn-primary" id="add-btn" onclick="openModal()" style="display:none">＋ ツールを追加</button>
         <div class="view-toggle">
-          <button id="btn-card" class="active" onclick="setView('card')">â</button>
-          <button id="btn-list" onclick="setView('list')">â°</button>
+          <button id="btn-card" class="active" onclick="setView('card')">⊞</button>
+          <button id="btn-list" onclick="setView('list')">☰</button>
         </div>
-        <button class="btn btn-icon" title="è¨­å®" onclick="openSetup()">Úï¸</button>
+        <button class="btn btn-icon" title="設定" onclick="openSetup()">ښ�️</button>
       </div>
     </div>
     <div class="filters">
-      <button class="filter-btn active" data-cat="ALL" onclick="setFilter('ALL')">ãã¹ã¦</button>
-      <button class="filter-btn" data-cat="è²©å£²ã»ç©è²©ç³»"         onclick="setFilter('è²©å£²ã»ç©è²©ç³»')">ð è²©å£²ã»ç©è²©ç³»</button>
-      <button class="filter-btn" data-cat="çºä¿¡ã»ã¡ãã£ã¢éå¶ç³»" onclick="setFilter('çºä¿¡ã»ã¡ãã£ã¢éå¶ç³»')">ð£ çºä¿¡ã»ã¡ãã£ã¢éå¶ç³»</button>
-      <button class="filter-btn" data-cat="åè¨ã»ä»£è¡ç³»"         onclick="setFilter('åè¨ã»ä»£è¡ç³»')">ð¼ åè¨ã»ä»£è¡ç³»</button>
-      <button class="filter-btn" data-cat="å¶ä½ã»éçºç³»"         onclick="setFilter('å¶ä½ã»éçºç³»')">ð¥ï¸ å¶ä½ã»éçºç³»</button>
-      <button class="filter-btn" data-cat="æ¯æ´ã»ã³ã³ãµã«ã»éå®¢ç³»" onclick="setFilter('æ¯æ´ã»ã³ã³ãµã«ã»éå®¢ç³»')">ð æ¯æ´ã»ã³ã³ãµã«ã»éå®¢ç³»</button>
-      <button class="filter-btn" data-cat="çæ´»æ¹åã»å®¶åº­æ´»ç¨ç³»" onclick="setFilter('çæ´»æ¹åã»å®¶åº­æ´»ç¨ç³»')">ð  çæ´»æ¹åã»å®¶åº­æ´»ç¨ç³»</button>
-      <button class="filter-btn" data-cat="æè³ã»ãéç³»"         onclick="setFilter('æè³ã»ãéç³»')">ð° æè³ã»ãéç³»</button>
-      <button class="filter-btn" data-cat="ã¨ã³ã¿ã¡ã»ã²ã¼ã ç³»"   onclick="setFilter('ã¨ã³ã¿ã¡ã»ã²ã¼ã ç³»')">ð® ã¨ã³ã¿ã¡ã»ã²ã¼ã ç³»</button>
+      <button class="filter-btn active" data-cat="ALL" onclick="setFilter('ALL')">すべて</button>
+      <button class="filter-btn" data-cat="販売・物販系"         onclick="setFilter('販売・物販系')">🛒 販売・物販系</button>
+      <button class="filter-btn" data-cat="発信・メディア運営系" onclick="setFilter('発信・メディア運営系')">📣 発信・メディア運営系</button>
+      <button class="filter-btn" data-cat="受託・代行系"         onclick="setFilter('受託・代行系')">💼 受託・代行系</button>
+      <button class="filter-btn" data-cat="制作・開発系"         onclick="setFilter('制作・開発系')">🖥️ 制作・開発系</button>
+      <button class="filter-btn" data-cat="支援・コンサル・集客系" onclick="setFilter('支援・コンサル・集客系')">📈 支援・コンサル・集客系</button>
+      <button class="filter-btn" data-cat="生活改善・家庭活用系" onclick="setFilter('生活改善・家庭活用系')">🏠 生活改善・家庭活用系</button>
+      <button class="filter-btn" data-cat="投資・お金系"         onclick="setFilter('投資・お金系')">💰 投資・お金系</button>
+      <button class="filter-btn" data-cat="エンタメ・ゲーム系"   onclick="setFilter('エンタメ・ゲーム系')">🎮 エンタメ・ゲーム系</button>
     </div>
   </div>
 </header>
@@ -487,193 +487,483 @@
 <!-- ===== Main ===== -->
 <main>
   <div class="count-label" id="count-label"></div>
-  <div id="loading-state">â³ ãã¼ã¿ãèª­ã¿è¾¼ãã§ãã¾ã...</div>
+  <div id="loading-state">⏳ データを読み込んでいます...</div>
   <div id="tool-container" class="card-view"></div>
   <div id="empty-state">
-    <div class="empty-icon">ð</div>
-    <p id="empty-msg">è©²å½ãããã¼ã«ãè¦ã¤ããã¾ããã§ãã</p>
+    <div class="empty-icon">🔍</div>
+    <p id="empty-msg">該当するツールが見つかりませんでした</p>
   </div>
 </main>
 
-<!-- ===== ãã¼ã«è¿½å ã»ç·¨é Modal ===== -->
+<!-- ===== ツール追加・編集 Modal ===== -->
 <div class="modal-overlay" id="modal-overlay" onclick="overlayClick(event,'modal-overlay')">
   <div class="modal">
     <div class="modal-header">
-      <div class="modal-title" id="modal-title">ãã¼ã«ãè¿½å </div>
-      <button class="modal-close" onclick="closeModal('modal-overlay')">â</button>
+      <div class="modal-title" id="modal-title">ツールを追加</div>
+      <button class="modal-close" onclick="closeModal('modal-overlay')">✕</button>
     </div>
     <div class="modal-body">
       <div class="field">
-        <label>ã¿ã¤ãã« <span class="req">*</span></label>
-        <input type="text" id="f-title" placeholder="ä¾ï¼ãã©ãå©çè¨ç®ãã¼ã«" />
+        <label>タイトル <span class="req">*</span></label>
+        <input type="text" id="f-title" placeholder="例：せどり利益計算ツール" />
       </div>
       <div class="field">
-        <label>ã¡ã¢ã»èª¬æ</label>
-        <textarea id="f-memo" placeholder="ãã®ãã¼ã«ã®èª¬æãæ¸ãã¦ãã ãã"></textarea>
+        <label>メモ・説明</label>
+        <textarea id="f-memo" placeholder="このツールの説明を書いてください"></textarea>
       </div>
       <div class="field">
-        <label>å¬éURL <span class="req">*</span></label>
+        <label>公開URL <span class="req">*</span></label>
         <input type="url" id="f-url" placeholder="https://yourname.github.io/tool" />
       </div>
       <div class="field">
-        <label>ã«ãã´ãª <span class="req">*</span></label>
+        <label>カテゴリ <span class="req">*</span></label>
         <select id="f-cat">
-          <option value="">é¸æãã¦ãã ãã</option>
-          <option value="è²©å£²ã»ç©è²©ç³»">ð è²©å£²ã»ç©è²©ç³»</option>
-          <option value="çºä¿¡ã»ã¡ãã£ã¢éå¶ç³»">ð£ çºä¿¡ã»ã¡ãã£ã¢éå¶ç³»</option>
-          <option value="åè¨ã»ä»£è¡ç³»">ð¼ åè¨ã»ä»£è¡ç³»</option>
-          <option value="å¶ä½ã»éçºç³»">ð¥ï¸ å¶ä½ã»éçºç³»</option>
-          <option value="æ¯æ´ã»ã³ã³ãµã«ã»éå®¢ç³»">ð æ¯æ´ã»ã³ã³ãµã«ã»éå®¢ç³»</option>
-          <option value="çæ´»æ¹åã»å®¶åº­æ´»ç¨ç³»">ð  çæ´»æ¹åã»å®¶åº­æ´»ç¨ç³»</option>
-          <option value="æè³ã»ãéç³»">ð° æè³ã»ãéç³»</option>
-          <option value="ã¨ã³ã¿ã¡ã»ã²ã¼ã ç³»">ð® ã¨ã³ã¿ã¡ã»ã²ã¼ã ç³»</option>
+          <option value="">選択してください</option>
+          <option value="販売・物販系">🛒 販売・物販系</option>
+          <option value="発信・メディア運営系">📣 発信・メディア運営系</option>
+          <option value="受託・代行系">💼 受託・代行系</option>
+          <option value="制作・開発系">🖥️ 制作・開発系</option>
+          <option value="支援・コンサル・集客系">📈 支援・コンサル・集客系</option>
+          <option value="生活改善・家庭活用系">🏠 生活改善・家庭活用系</option>
+          <option value="投資・お金系">💰 投資・お金系</option>
+          <option value="エンタメ・ゲーム系">🎮 エンタメ・ゲーム系</option>
         </select>
       </div>
       <div class="field">
-        <label>è¿½å èããã¯ãã¼ã </label>
-        <input type="text" id="f-author" placeholder="ä¾ï¼ãã£ã" />
+        <label>追加者ニックネーム</label>
+        <input type="text" id="f-author" placeholder="例：ディノ" />
       </div>
       <div class="field">
-        <label>ãã­ãã£ã¼ã«URL</label>
+        <label>プロフィールURL</label>
         <input type="url" id="f-profile" placeholder="https://github.com/yourname" />
       </div>
     </div>
     <div class="modal-footer">
-      <button class="btn btn-outline" onclick="closeModal('modal-overlay')">ã­ã£ã³ã»ã«</button>
-      <button class="btn btn-primary" id="modal-save-btn" onclick="saveItem()">è¿½å ãã</button>
+      <button class="btn btn-outline" onclick="closeModal('modal-overlay')">キャンセル</button>
+      <button class="btn btn-primary" id="modal-save-btn" onclick="saveItem()">追加する</button>
     </div>
   </div>
 </div>
 
-<!-- ===== ã»ããã¢ãã Modal ===== -->
+<!-- ===== セットアップ Modal ===== -->
 <div class="modal-overlay" id="setup-overlay" onclick="overlayClick(event,'setup-overlay')">
   <div class="modal" style="max-width:540px">
     <div class="modal-header">
-      <div class="modal-title">âï¸ æ¥ç¶è¨­å®</div>
-      <button class="modal-close" onclick="closeModal('setup-overlay')">â</button>
+      <div class="modal-title">⚙️ 接続設定</div>
+      <button class="modal-close" onclick="closeModal('setup-overlay')">✕</button>
     </div>
     <div class="modal-body">
 
-      <!-- ååã»ããã¢ããèª¬æ -->
+      <!-- 初回セットアップ説明 -->
       <div id="setup-guide" style="display:none">
         <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:12px">
-          ååã®ã¿ããã¼ã¿ä¿å­å ´æï¼JSONBin.ioï¼ã®è¨­å®ãå¿è¦ã§ãã<br>
-          <strong>ç®¡çèã®æ¹</strong>ã¯ä»¥ä¸ã®æé ã§è¨­å®ãã¦ãã ããã
+          初回のみ、データ保存場所（JSONBin.io）の設定が必要です。<br>
+          <strong>管理者の方</strong>は以下の手順で設定してください。
         </p>
         <div class="setup-steps">
           <div class="setup-step">
             <div class="num">1</div>
             <div class="text">
-              <a href="https://jsonbin.io" target="_blank">jsonbin.io</a> ã«ã¢ã¯ã»ã¹ãã¦ç¡æã¢ã¯ã¦ã³ããä½æ
+              <a href="https://jsonbin.io" target="_blank">jsonbin.io</a> にアクセスして無料アクウンドを作成
             </div>
           </div>
           <div class="setup-step">
             <div class="num">2</div>
             <div class="text">
-              ã­ã°ã¤ã³å¾ã<strong>ãNEW BINã</strong>ãã¯ãªãã¯ â <code>[]</code> ã¨å¥åãã¦ä½æ
+              ログイン後、<strong>「NEW BIN」</strong>をクリック → <code>[]</code> と入力して作成
             </div>
           </div>
           <div class="setup-step">
             <div class="num">3</div>
             <div class="text">
-              ä½æãããBINã®URLã«å«ã¾ãã <strong>BIN ID</strong>ï¼ä¾ï¼<code>6643ab...</code>ï¼ãã³ãã¼
+              作成されたBINのURLに含まれる <strong>BIN ID</strong>（例：<code>6643ab...</code>）をコピー
             </div>
           </div>
           <div class="setup-step">
             <div class="num">4</div>
             <div class="text">
-              å³ä¸ã®ã¢ã«ã¦ã³ãã¢ã¤ã³ã³ âãAPI KEYSãâ <strong>Master Key</strong>ãã³ãã¼
+              右上のアカウントアイコン →「API KEYS」→ <strong>Master Key</strong>をコピー
             </div>
           </div>
           <div class="setup-step">
             <div class="num">5</div>
             <div class="text">
-              ä¸ã®ãã©ã¼ã ã«å¥åãã¦ãä¿å­ããä»²éã«ã¯ <strong>åå ã³ã¼ããå±æ</strong> ãã¦ãã ãã
+              下のフォームに入力して「保存」。仲間には <strong>参加コードを共有</strong> してください
             </div>
           </div>
         </div>
       </div>
 
-      <!-- åå ã³ã¼ãã§æ¥ç¶ -->
+      <!-- 参加コードで接続 -->
       <div class="field">
-        <label>åå ã³ã¼ã <span class="req">*</span></label>
-        <input type="text" id="s-joincode" placeholder="ç®¡çèããå±æãããåå ã³ã¼ããè²¼ãä»ã" />
-        <div class="hint">ç®¡çèããå±æãããåå ã³ã¼ããå¥åãã¦ãã ãã</div>
+        <label>参加コード <span class="req">*</span></label>
+        <input type="text" id="s-joincode" placeholder="管理者から共有しれた参加コードを貼り付け" />
+        <div class="hint">管理者から共有された参加コードを入力してください</div>
       </div>
 
       <hr class="divider" />
       <p style="font-size:.8rem;color:var(--text-muted);text-align:center">
-        â ç®¡çèã®æ¹ã¯ããã§æ°è¦è¨­å® â
+        ─ 管理者の方はここで新規設定 ─
       </p>
 
       <div class="field">
         <label>BIN ID</label>
-        <input type="text" id="s-binid" placeholder="JSONBinã®BIN ID" />
+        <input type="text" id="s-binid" placeholder="JSONBinのBIN ID" />
       </div>
       <div class="field">
         <label>Master Key</label>
         <input type="password" id="s-key" placeholder="$2b$..." />
-        <div class="hint">å¥åå¾ãä¿å­ãã¦åå ã³ã¼ããçæããã¯ãªãã¯ããã©cà¹b¨8à¬øàï8àâxàc9/g8à¢xà£8ào¸àfOÙ]Ù]]YHÙ[\]YXÛÙK]Ü\Ý[OH\Ü^NÛH]Û\ÜÏHY[X[¸§!H9cà¹b¨8à¬øàï8àâ{ï"9.ìºe¤øàjùaly§"xàeøài¸àcøàh8àexàa;ï"OÛX[]Ý[OH\Ü^N^ÙØ\[]\OH^YHÙ[\]YXÛÙHXYÛHÝ[OHÛY[Z[N[ÛÜÜXÙNÙÛ\Ú^N[NØXÚÙÜÝ[ÙÏ]ÛÛ\ÜÏH[Ý][HÛÛXÚÏHÛÜRÚ[ÛÙJ
-HÝ[OHÚ]K\ÜXÙNÝÜ\ÜY[ÎL¸à¬øàå8àïØ]ÛÙ]Ù]Ù]Ù]]Û\ÜÏH[Ù[YÛÝ\]ÛÛ\ÜÏH[Ý][HÛÛXÚÏHÛÜÙS[Ù[
-	ÜÙ]\[Ý\^IÊH¸à«xàèøàìøà®øàêÏØ]Û]ÛÛ\ÜÏH\[X\HÛÛXÚÏHØ]TÙ]\
+        <div class="hint">入力後「保存して参加コードを生成」をクリックすると参加コードが作られます</div>
+      </div>
 
-H¹/çykf8àeøài¹£©yí¦Ø]ÛÙ]Ù]Ù]KKHOOOOHØ\ÝOOOOHKO]YHØ\ÝÙ]ØÜ\ËÈOOOOH9k¦¹¥lOOOOBÛÛÝÓÓQ×ÒÑVHH	ØÛ]YWÝÛÛ×ØÙÉÎÂÛÛÝÓÓSÐTÑHH	ÚÎËØ\KÛÛ[[ËÝËØÎÂËÈOOOOH9â­¹¡bÈOOOOB][ÛÛÈH×NÂ]Ý\[[\H	ÐS	ÎÂ]Ý\[Y]ÈH	ØØ\	ÎÂ]Y][^HLNÂ]ÙÈH[ÈËÈÈ[YX\Ý\Ù^HBËÈOOOOH9b'y§'ùc%OOOOB
-[Ý[Û[]
+      <div id="generated-code-wrap" style="display:none">
+        <div class="field">
+          <label>✅ 参加コード（仲間に共有してください）</label>
+          <div style="display:flex;gap:8px">
+            <input type="text" id="generated-code" readonly style="font-family:monospace;font-size:.8rem;background:#f0f4ff" />
+            <button class="btn btn-outline" onclick="copyJoinCode()" style="white-space:nowrap;padding:8px 12px">コピー</button>
+          </div>
+        </div>
+      </div>
 
-HÂÛÛÝ]ÈHØØ[ÝÜYÙKÙ]][JÓÓQ×ÒÑVJNÂY
-]ÊHÂHÈÙÈHÓÓ\ÙJ]Ø]ÊJNÈHØ]Ú
-JHßBBY
-XÙÈXÙË[Y
-HÂÙ]Þ[ÐYÙJ	Ù\ÜË	ù§*¹£©yí¦ÊNÂØÝ[Y[Ù][[Y[RY
-	ÛØY[Ë\Ý]IÊKÝ[K\Ü^HH	ÛÛIÎÂÚÝÑ[\J	ø¦¦{î#È8àoøàf¹cìù."¸àkº*+yk¦¸àç8à¯øàìøàbøà¢y£©yí¦º*+yk¦¸à¤¸àeøài¸àcøàh8àexàa	ÊNÂÜ[Ù]\
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-outline" onclick="closeModal('setup-overlay')">キャンセル</button>
+      <button class="btn btn-primary" onclick="saveSetup()">保存して接続</button>
+    </div>
+  </div>
+</div>
 
-NÂH[ÙHÂØY]J
-NÂBJJ
-NÂËÈOOOOH8àáøàï8à¯ú*«xàoú/¯8àoÈOOOOB\Þ[È[Ý[ÛØY]J
-HÂÙ]Þ[ÐYÙJ	ÜÞ[Ú[ÉË	ú*«xàoú/¯8àoù.+KÊNÂØÝ[Y[Ù][[Y[RY
-	ÛØY[Ë\Ý]IÊKÝ[K\Ü^HH	ØØÚÉÎÂØÝ[Y[Ù][[Y[RY
-	ÝÛÛXÛÛZ[\ÊK[\SH	ÉÎÂØÝ[Y[Ù][[Y[RY
-	Ù[\K\Ý]IÊKÝ[K\Ü^HH	ÛÛIÎÂHÂÛÛÝXY\ÈHßNÂY
-ÙËX\Ý\Ù^JHXY\ÖÉÖSX\Ý\RÙ^I×HHÙËX\Ý\Ù^NÂÛÛÝ\ÈH]ØZ]]Ú
-	ÒÓÓSÐTÑ_KÉØÙË[YKÛ]\ÝÈXY\ÈJNÂY
-\\ËÚÊHÝÈ]È\Ü	Ò	È
-È\ËÝ]\ÊNÂÛÛÝÛÛH]ØZ]\ËÛÛ
-NÂ[ÛÛÈH\^K\Ð\^JÛÛXÛÜ
-HÈÛÛXÛÜ×NÂÙ]Þ[ÐYÙJ	ÛÚÉË	ù£©yí¦¹®"8àoÉÊNÂØÝ[Y[Ù][[Y[RY
-	ØYXÊKÝ[K\Ü^HH	ÉÎÂØÝ[Y[Ù][[Y[RY
-	ÛØY[Ë\Ý]IÊKÝ[K\Ü^HH	ÛÛIÎÂ[\
-NÂHØ]Ú
-JHÂÙ]Þ[ÐYÙJ	Ù\ÜË	ú*«xàoú/¯8àoøàª8àêxàï	ÊNÂØÝ[Y[Ù][[Y[RY
-	ÛØY[Ë\Ý]IÊKÝ[K\Ü^HH	ÛÛIÎÂÚÝÑ[\J	øàáøàï8à¯øàkº*«xàoú/¯8àoøàjùi,y¥eøàeøào¸àeøàgøà º*+yk¦¸à¡9£©yí¦¸à¤¹è®º*£xàeøài¸àcøàh8àexàa8à ÊNÂBBËÈOOOOH8à«øàêxà©¸àây/çykfOOOOB\Þ[È[Ý[ÛØ]UÐÛÝY
+<!-- ===== Toast ===== -->
+<div id="toast"></div>
 
-HÂY
-XÙÈXÙË[Y
-H]\[ÙNÂÙ]Þ[ÐYÙJ	ÜÞ[Ú[ÉË	ù/çykf9.+KÊNÂHÂÛÛÝXY\ÈHÈ	ÐÛÛ[U\IÎ	Ø\XØ][ÛÚÛÛÈNÂY
-ÙËX\Ý\Ù^JHXY\ÖÉÖSX\Ý\RÙ^I×HHÙËX\Ý\Ù^NÂÛÛÝ\ÈH]ØZ]]Ú
-	ÒÓÓSÐTÑ_KÉØÙË[YXÂY]Ù	ÔU	ËXY\ËÙNÓÓÝ[ÚYJ[ÛÛÊBJNÂY
-\\ËÚÊHÝÈ]È\Ü	Ò	È
-È\ËÝ]\ÊNÂÙ]Þ[ÐYÙJ	ÛÚÉË	ù£©yí¦¹®"8àoÉÊNÂ]\YNÂHØ]Ú
-JHÂÙ]Þ[ÐYÙJ	Ù\ÜË	ù/çykf8àª8àêxàï	ÊNÂ]\[ÙNÂBBËÈOOOOH8àåxà¨øàêøà¯øàïOOOOB[Ý[ÛÙ][\Ø]
-HÂÝ\[[\HØ]ÂØÝ[Y[]Y\TÙ[XÝÜ[
-	Ë[\XÊKÜXXÚ
-OÛ\ÜÓ\ÝÙÙÛJ	ØXÝ]IË]\Ù]Ø]OOHØ]
-B
-NÂ[\
-NÂBËÈOOOOH:(j9é.¹b!ù¦ïÈOOOOB[Ý[ÛÙ]Y]ÊY]ÊHÂÝ\[Y]ÈHY]ÎÂØÝ[Y[Ù][[Y[RY
-	ØXØ\	ÊKÛ\ÜÓ\ÝÙÙÛJ	ØXÝ]IËY]ÈOOH	ØØ\	ÊNÂØÝ[Y[Ù][[Y[RY
-	Ø[\Ý	ÊKÛ\ÜÓ\ÝÙÙÛJ	ØXÝ]IËY]ÈOOH	Û\Ý	ÊNÂØÝ[Y[Ù][[Y[RY
-	ÝÛÛXÛÛZ[\ÊKÛ\ÜÓ[YHHY]ÈOOH	ØØ\	ÈÈ	ØØ\]Y]ÉÈ	Û\Ý]Y]ÉÎÂBËÈOOOOH8àë8àìøàà8àê¸àìøà¬OOOOB[Ý[Û[\
-HÂÛÛÝ[\YHÝ\[[\OOH	ÐS	ÂÈ[ÛÛËX\
+<script>
+  // ===== 定数 =====
+  const CONFIG_KEY = 'claude_tools_cfg';
+  const JSONBIN_BASE = 'https://api.jsonbin.io/v3/b';
 
-JHO
-ËÚN_JJB[ÛÛËX\
+  // ===== 状態 =====
+  let allTools = [];
+  let currentFilter = 'ALL';
+  let currentView = 'card';
+  let editIndex = -1;
+  let cfg = null; // { binId, masterKey }
 
-JHO
-ËÚN_JJK[\OØ]YÛÜHOOHÝ\[[\NÂÛÛÝÛÛZ[\HØÝ[Y[Ù][[Y[RY
-	ÝÛÛXÛÛZ[\ÊNÂÛÛÝ[\HHØÝ[Y[Ù][[Y[RY
-	Ù[\K\Ý]IÊNÂÛÛÝÛHØÝ[Y[Ù][[Y[RY
-	ØÛÝ[[X[	ÊNÂÛÛZ[\[\SH	ÉÎÂY
-[\Y[ÝOOH
-HÂ[\KÝ[K\Ü^HH	ØØÚÉÎÂØÝ[Y[Ù][[Y[RY
-	Ù[\K[\ÙÉÊK^ÛÛ[H[ÛÛË[ÝOOHÈ	øàoøàh8àá8àï8àêøàc8à`¸à¢¸àoøàføà¤øà ¸à#;ï"È8àá8àï8àêøà¤º/ïyb¨8à#xàbøà¢yænúc,¸àeøào¸àeøà¡øàa»ï IÂ	ú*l¹odøàfxà¢øàá8àï8àêøàc:)¢øài8àbøà¢¸ào¸àføà¤øàiøàeøàgÉÎÂÛ^ÛÛ[H	ÉÎÂ]\ÂB[\KÝ[K\Ü^HH	ÛÛIÎÂÛ^ÛÛ[H	Ù[\Y[ÝH9.í¸àk¸àá8àï8àêØÂ[\YÜXXÚ
-ÛÛOÂÛÛÝ]]Ü[HÛÛ]]ÜÈÜ[Ý[OHÜXÚ]NÈº/ïyb¨: !{ï&ÜÜ[Ì((Ñ½½°¹ÁÉ½¥±UÉ°(üñ¡ÉôíÍ!Ñµ°¡Ñ½½°¹ÁÉ½¥±UÉ°¥ôÑÉÐô}±¹¬É°ô¹½½Á¹ÈûÂ~FíÍ!Ñµ°¡Ñ½½°¹ÕÑ¡½È¥ôð½ù(èñÍÁ¸ûÂ~FíÍ!Ñµ°¡Ñ½½°¹ÕÑ¡½È¥ôð½ÍÁ¸ù(ôð½¥Øù(èì(½¹ÍÐÉô½Õµ¹Ð¹ÉÑ±µ¹Ð ¥Ø¤ì(É¹±ÍÍ9µôÑ½½°µÉì(É¹¥¹¹É!Q50ô(ñ¥Ø±ÍÌôÉµ½äø(ñ¥Ø±ÍÌôÉµÑ¥Ñ±øíÍ!Ñµ°¡Ñ½½°¹Ñ¥Ñ±¥ôð½¥Øø(ñ¥Ø±ÍÌôÉµµµ¼øíÍ!Ñµ°¡Ñ½½°¹µµ¼ñð¥ôð½¥Øø(íÕÑ¡½É!Ñµ±ô(ð½¥Øø(ñ¥Ø±ÍÌôÉµ½½ÑÈø(ñÍÁ¸±ÍÌôÐµÑÑµÐôíÍ!Ñµ°¡Ñ½½°¹Ñ½Éä¥ôøíÍ!Ñµ°¡Ñ½½°¹Ñ½Éä¥ôð½ÍÁ¸ø(ñ¥Ø±ÍÌôÉµÑ¥½¹Ìø(ñ±ÍÌô½Á¸µÑ¸¡ÉôíÍ!Ñµ°¡Ñ½½°¹ÕÉ°¥ôÑÉÐô}±¹¬É°ô¹½½Á¹È¹½ÉÉÉÈû¦/¾<\ð½ø(ñÕÑÑ½¸±ÍÌô¥½¸µÑ¸Ñ¥Ñ±ôÞ£¦n½¹±¥¬ô½Á¹¥Ð íÑ½½°¹}¥ô¤ûr¾â<ð½ÕÑÑ½¸ø(ñÕÑÑ½¸±ÍÌô¥½¸µÑ¸¹ÈÑ¥Ñ±ô&+¦f½¹±¥¬ô±Ñ%Ñ´ íÑ½½°¹}¥ô¤ûÂ~^G³ºâ<ð½ÕÑÑ½¸ø(ð½¥Øø(ÂöFcæ°¢6öçFæW"æVæD6ÆB6&B°¢Ò°¢Ð ¢òòÓÓÓÓÒûÞXª8:.8;Î888:²ÓÓÓÓÐ¢gVæ7Föâ÷VäÖöFÂ°¢VFDæFWÒÓ°¢Fö7VÖVçBævWDVÆVÖVçD'BvÖöFÂ×FFÆRrçFWD6öçFVçBÒ~88N8;Î8:¾8).ûÞXªs°¢Fö7VÖVçBævWDVÆVÖVçD'BvÖöFÂ×6fRÖ'FârçFWD6öçFVçBÒ~ûÞXª88(²s°¢²vb×FFÆRrÂvbÖÖVÖòrÂvb×W&ÂrÂvbÖWF÷"rÂvb×&öfÆRuÒæf÷$V6BÓà¢Fö7VÖVçBævWDVÆVÖVçD'BBçfÇVRÒrp¢°¢Fö7VÖVçBævWDVÆVÖVçD'BvbÖ6BrçfÇVRÒrs°¢Fö7VÖVçBævWDVÆVÖVçD'BvÖöFÂÖ÷fW&Æræ6Æ74Æ7BæFBv÷Vâr°¢6WEFÖV÷WBÓâFö7VÖVçBævWDVÆVÖVçD'Bvb×FFÆRræfö7W2Â°¢Ð ¢òòÓÓÓÓÒ{z¸n8:.8;Î888:²ÓÓÓÓÐ¢gVæ7Föâ÷VäVFBæFW°¢VFDæFWÒæFW°¢6öç7BBÒÆÅFööÇ5¶æFWÓ°¢Fö7VÖVçBævWDVÆVÖVçD'BvÖöFÂ×FFÆRrçFWD6öçFVçBÒ~88N8;Î8:¾8).{z¸bs°¢Fö7VÖVçBævWDVÆVÖVçD'BvÖöFÂ×6fRÖ'FârçFWD6öçFVçBÒ~KùÞZÙ88(²s°¢Fö7VÖVçBævWDVÆVÖVçD'Bvb×FFÆRrçfÇVRÒBçFFÆS°¢Fö7VÖVçBævWDVÆVÖVçD'BvbÖÖVÖòrçfÇVRÒBæÖVÖòÇÂrs°¢Fö7VÖVçBævWDVÆVÖVçD'Bvb×W&ÂrçfÇVRÒBçW&Ã°¢Fö7VÖVçBævWDVÆVÖVçD'BvbÖ6BrçfÇVRÒBæ6FVv÷'°¢Fö7VÖVçBævWDVÆVÖVçD'BvbÖWF÷"rçfÇVRÒBæWF÷"ÇÂrs°¢Fö7VÖVçBævWDVÆVÖVçD'Bvb×&öfÆRrçfÇVRÒBç&öfÆUW&ÂÇÂrs°¢Fö7VÖVçBævWDVÆVÖVçD'BvÖöFÂÖ÷fW&Æræ6Æ74Æ7BæFBv÷Vâr°¢6WEFÖV÷WBÓâFö7VÖVçBævWDVÆVÖVçD'Bvb×FFÆRræfö7W2Â°¢Ð ¢gVæ7Föâ6Æ÷6TÖöFÂB°¢Fö7VÖVçBævWDVÆVÖVçD'BBæ6Æ74Æ7Bç&VÖ÷fRv÷Vâr°¢Ð¢gVæ7Föâ÷fW&Æ6Æ6²RÂB°¢bRçF&vWBÓÓÒFö7VÖVçBævWDVÆVÖVçD'BB6Æ÷6TÖöFÂB°¢Ð ¢òòÓÓÓÓÒKùÞZÙÓÓÓÓÐ¢7æ2gVæ7Föâ6fTFVÒ°¢6öç7BFFÆRÒFö7VÖVçBævWDVÆVÖVçD'Bvb×FFÆRrçfÇVRçG&Ò°¢6öç7BÖVÖòÒFö7VÖVçBævWDVÆVÖVçD'BvbÖÖVÖòrçfÇVRçG&Ò°¢6öç7BW&ÂÒFö7VÖVçBævWDVÆVÖVçD'Bvb×W&ÂrçfÇVRçG&Ò°¢6öç7B6BÒFö7VÖVçBævWDVÆVÖVçD'BvbÖ6BrçfÇVS°¢6öç7BWF÷"ÒFö7VÖVçBævWDVÆVÖVçD'BvbÖWF÷"rçfÇVRçG&Ò°¢6öç7B&öfÆUW&ÂÒFö7VÖVçBævWDVÆVÖVçD'Bvb×&öfÆRrçfÇVRçG&Ò° ¢bFFÆR²ÆW'B~8+þ8*N888:¾8).XZ^X©¾8~8n8þ88^8Br²&WGW&ã²Ð¢bW&Â²ÆW'BuU$Î8).XZ^X©¾8~8n8þ88^8Br²&WGW&ã²Ð¢b6B²ÆW'B~8*¾88n8+N8:®8).h©î8~8n8þ88^8Br²&WGW&ã²Ð ¢6öç7BFVÒÒ²FFÆRÂÖVÖòÂW&ÂÂ6FVv÷'¢6BÂWF÷"Â&öfÆUW&ÂÓ°¢6öç7B'FâÒFö7VÖVçBævWDVÆVÖVçD'BvÖöFÂ×6fRÖ'Fâr°¢'FâæF6&ÆVBÒG'VS°¢'FâçFWD6öçFVçBÒ~KùÞZÙKÒâââs° ¢bVFDæFWÓÓÒÓ°¢ÆÅFööÇ2çW6FVÒ°¢ÒVÇ6R°¢ÆÅFööÇ5¶VFDæFWÒÒFVÓ°¢Ð ¢6öç7Bö²ÒvB6fUFô6Æ÷VB°¢'FâæF6&ÆVBÒfÇ6S°¢'FâçFWD6öçFVçBÒVFDæFWÓÓÒÓò~ûÞXª88(²r¢~KùÞZÙ88(²s° ¢bö²°¢6÷uFö7BVFDæFWÓÓÒÓò~)ÈR88N8;Î8:¾8).ûÞXª8~8î8~8òr¢~)ÈR88N8;Î8:¾8).i»Nik8~8î8~8òr°¢6Æ÷6TÖöFÂvÖöFÂÖ÷fW&Ær°¢&VæFW"°¢ÒVÇ6R°¢6÷uFö7B~)ØÂKùÞZÙ8¾ZKiY~8~8î8~8þ8.XhÞ[ªn8®n8~8þ88^8Br°¢òò8:Þ8;Î8:¾8988>8*ð¢bVFDæFWÓÓÒÓÆÅFööÇ2ç÷°¢Ð¢Ð ¢òòÓÓÓÓÒX®BÓÓÓÓÐ¢7æ2gVæ7FöâFVÆWFTFVÒæFW°¢b6öæf&Ò8ÂG¶ÆÅFööÇ5¶æFWÒçFFÆWÞ8Þ8).X®N8~8î88¾ûÉö&WGW&ã°¢6öç7B&6·WÒ²ââæÆÅFööÇ5Ó°¢ÆÅFööÇ2ç7Æ6RæFWÂ°¢&VæFW"°¢6öç7Bö²ÒvB6fUFô6Æ÷VB°¢bö²°¢6÷uFö7B	ùyûòX®N8~8î8~8òr°¢ÒVÇ6R°¢ÆÅFööÇ2Ò&6·W°¢&VæFW"°¢6÷uFö7B~)ØÂX®N8¾ZKiY~8~8î8~8òr°¢Ð¢Ð ¢òòÓÓÓÓÒ8+¾88>888*.88>89rÓÓÓÓÐ¢gVæ7Föâ÷Vå6WGW°¢6öç7B4f'7BÒ6frÇÂ6fræ&äC°¢Fö7VÖVçBævWDVÆVÖVçD'Bw6WGWÖwVFRrç7GÆRæF7ÆÒ4f'7Bòrr¢væöæRs°¢b6fr°¢Fö7VÖVçBævWDVÆVÖVçD'Bw2Ö&æBrçfÇVRÒ6fræ&äBÇÂrs°¢Fö7VÖVçBævWDVÆVÖVçD'Bw2Ö¶WrçfÇVRÒ6fræÖ7FW$¶WÇÂrs°¢òòXø.Xª8+>8;Î88zK ¢6öç7B6öFRÒ'Fö¥4ôâç7G&ævg6fr°¢Fö7VÖVçBævWDVÆVÖVçD'Bw2Ö¦öæ6öFRrçfÇVRÒ6öFS°¢Fö7VÖVçBævWDVÆVÖVçD'BvvVæW&FVBÖ6öFRrçfÇVRÒ6öFS°¢Fö7VÖVçBævWDVÆVÖVçD'BvvVæW&FVBÖ6öFR×w&rç7GÆRæF7ÆÒrs°¢ÒVÇ6R°¢Fö7VÖVçBævWDVÆVÖVçD'Bw2Ö¦öæ6öFRrçfÇVRÒrs°¢Fö7VÖVçBævWDVÆVÖVçD'Bw2Ö&æBrçfÇVRÒrs°¢Fö7VÖVçBævWDVÆVÖVçD'Bw2Ö¶WrçfÇVRÒrs°¢Fö7VÖVçBævWDVÆVÖVçD'BvvVæW&FVBÖ6öFR×w&rç7GÆRæF7ÆÒvæöæRs°¢Ð¢Fö7VÖVçBævWDVÆVÖVçD'Bw6WGWÖ÷fW&Æræ6Æ74Æ7BæFBv÷Vâr°¢Ð ¢gVæ7Föâ6fU6WGW°¢6öç7B¦öä6öFRÒFö7VÖVçBævWDVÆVÖVçD'Bw2Ö¦öæ6öFRrçfÇVRçG&Ò°¢6öç7B&äBÒFö7VÖVçBævWDVÆVÖVçD'Bw2Ö&æBrçfÇVRçG&Ò°¢6öç7BÖ7FW$¶WÒFö7VÖVçBævWDVÆVÖVçD'Bw2Ö¶WrçfÇVRçG&Ò° ¢ÆWBæWt6frÒçVÆÃ° ¢òòXø.Xª8+>8;Î888ÎXZ^X©¾8^8(Î8n8N8(¾ZNY8þ8Þ88(8).XJ®XX¢b¦öä6öFR°¢G'°¢æWt6frÒ¥4ôâç'6RFö"¦öä6öFR°¢bæWt6fræ&äBF&÷ræWrW'&÷"°¢Ò6F6R°¢ÆW'B~Xø.Xª8+>8;Î888ÎjÚ>8~8þ8.8(®8î8¾8)>8.zêyn^8¾XhÞz+®¨Þ8~8n8þ88^8N8"r°¢&WGW&ã°¢Ð¢ÒVÇ6Rb&äBbbÖ7FW$¶W°¢æWt6frÒ²&äBÂÖ7FW$¶WÓ°¢òòXø.Xª8+>8;Î88yIþh8;¾zK ¢6öç7B6öFRÒ'Fö¥4ôâç7G&ævgæWt6fr°¢Fö7VÖVçBævWDVÆVÖVçD'BvvVæW&FVBÖ6öFRrçfÇVRÒ6öFS°¢Fö7VÖVçBævWDVÆVÖVçD'BvvVæW&FVBÖ6öFR×w&rç7GÆRæF7ÆÒrs°¢Fö7VÖVçBævWDVÆVÖVçD'Bw2Ö¦öæ6öFRrçfÇVRÒ6öFS°¢6÷uFö7B~)ÈRXø.Xª8+>8;Î888).yIþh8~8î8~8þ8.8+>89N8;Î8~8nK».i>8¾X[iÈ8~8n8þ88^8NûÈr°¢ÒVÇ6R°¢ÆW'B~Xø.Xª8+>8;Î8888î8þ8ô$âN8Ö7FW"¶W8).XZ^X©¾8~8n8þ88^8N8"r°¢&WGW&ã°¢Ð ¢6frÒæWt6fs°¢Æö6Å7F÷&vRç6WDFVÒ4ôäduô´UÂ'Fö¥4ôâç7G&ævg6fr°¢6Æ÷6TÖöFÂw6WGWÖ÷fW&Ær°¢6÷uFö7B~)ÈRhê^{i®ÞZé®8).KùÞZÙ8~8î8~8òr°¢ÆöDFF°¢Ð ¢gVæ7Föâ6÷¦öä6öFR°¢6öç7B6öFRÒFö7VÖVçBævWDVÆVÖVçD'BvvVæW&FVBÖ6öFRrçfÇVS°¢æfvF÷"æ6Æ&ö&Bçw&FUFWB6öFRçFVâÓâ6÷uFö7B	ù8²Xø.Xª8+>8;Î888).8+>89N8;Î8~8î8~8þûÈr°¢Ð ¢òòÓÓÓÓÒ8:n8;Î88n8*>8:®88n8*2ÓÓÓÓÐ¢gVæ7Föâ6WE7æ4&FvRGRÂFWB°¢6öç7BVÂÒFö7VÖVçBævWDVÆVÖVçD'Bw7æ2Ö&FvRr°¢VÂæ6Æ74æÖRÒw7æ2Ö&FvRr²GRÓÓÒvö²ròrr¢G·GWÖ°¢Fö7VÖVçBævWDVÆVÖVçD'Bw7æ2×FWBrçFWD6öçFVçBÒFWC°¢Ð ¢gVæ7Föâ6÷uFö7B×6r°¢6öç7BVÂÒFö7VÖVçBævWDVÆVÖVçD'BwFö7Br°¢VÂçFWD6öçFVçBÒ×6s°¢VÂæ6Æ74Æ7BæFBw6÷rr°¢6ÆV%FÖV÷WBVÂå÷B°¢VÂå÷BÒ6WEFÖV÷WBÓâVÂæ6Æ74Æ7Bç&VÖ÷fRw6÷rrÂ3°¢Ð ¢gVæ7Föâ6÷tV×G×6r°¢Fö7VÖVçBævWDVÆVÖVçD'BvV×G×7FFRrç7GÆRæF7ÆÒv&Æö6²s°¢Fö7VÖVçBævWDVÆVÖVçD'BvV×GÖ×6rrçFWD6öçFVçBÒ×6s°¢Fö7VÖVçBævWDVÆVÖVçD'Bv6÷VçBÖÆ&VÂrçFWD6öçFVçBÒrs°¢Ð ¢gVæ7FöâW64FÖÂ2°¢&WGW&â7G&ær7ÇÂrr¢ç&WÆ6RòbörÂrf×²rç&WÆ6RóÂörÂrfÇC²r¢ç&WÆ6RóâörÂrfwC²rç&WÆ6Rò"örÂrgV÷C²r°¢Ð ¢Fö7VÖVçBæFDWfVçDÆ7FVæW"v¶WF÷vârÂRÓâ°¢bRæ¶WÓÓÒtW66Rr°¢6Æ÷6TÖöFÂvÖöFÂÖ÷fW&Ær°¢6Æ÷6TÖöFÂw6WGWÖ÷fW&Ær°¢Ð¢Ò°£Â÷67&Cà£Âö&öGà£ÂöFÖÃà
+  // ===== 初期化 =====
+  (function init() {
+    const raw = localStorage.getItem(CONFIG_KEY);
+    if (raw) {
+      try { cfg = JSON.parse(atob(raw)); } catch(e) {}
+    }
+    if (!cfg || !cfg.binId) {
+      setSyncBadge('error', '未接続');
+      document.getElementById('loading-state').style.display = 'none';
+      showEmpty('⚙️ まず右上の設定ボタンから接続設定をしてください');
+      openSetup();
+    } else {
+      loadData();
+    }
+  })();
+
+  // ===== データ読み込み =====
+  async function loadData() {
+    setSyncBadge('syncing', '読み込み中...');
+    document.getElementById('loading-state').style.display = 'block';
+    document.getElementById('tool-container').innerHTML = '';
+    document.getElementById('empty-state').style.display = 'none';
+    try {
+      const headers = {};
+      if (cfg.masterKey) headers['X-Master-Key'] = cfg.masterKey;
+      const res = await fetch(`${JSONBIN_BASE}/${cfg.binId}/latest`, { headers });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const json = await res.json();
+      allTools = Array.isArray(json.record) ? json.record : [];
+      setSyncBadge('ok', '接続済み');
+      document.getElementById('add-btn').style.display = '';
+      document.getElementById('loading-state').style.display = 'none';
+      render();
+    } catch(e) {
+      setSyncBadge('error', '読み込みエラー');
+      document.getElementById('loading-state').style.display = 'none';
+      showEmpty('データの読み込みに失敗しました。設定や接続を確認してください。');
+    }
+  }
+
+  // ===== クラウド保存 =====
+  async function saveToCloud() {
+    if (!cfg || !cfg.binId) return false;
+    setSyncBadge('syncing', '保存中...');
+    try {
+      const headers = { 'Content-Type': 'application/json' };
+      if (cfg.masterKey) headers['X-Master-Key'] = cfg.masterKey;
+      const res = await fetch(`${JSONBIN_BASE}/${cfg.binId}`, {
+        method: 'PUT',
+        headers,
+        body: JSON.stringify(allTools)
+      });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      setSyncBadge('ok', '接続済み');
+      return true;
+    } catch(e) {
+      setSyncBadge('error', '保存エラー');
+      return false;
+    }
+  }
+
+  // ===== フィルター =====
+  function setFilter(cat) {
+    currentFilter = cat;
+    document.querySelectorAll('.filter-btn').forEach(b =>
+      b.classList.toggle('active', b.dataset.cat === cat)
+    );
+    render();
+  }
+
+  // ===== 表示切替 =====
+  function setView(view) {
+    currentView = view;
+    document.getElementById('btn-card').classList.toggle('active', view === 'card');
+    document.getElementById('btn-list').classList.toggle('active', view === 'list');
+    document.getElementById('tool-container').className = view === 'card' ? 'card-view' : 'list-view';
+  }
+
+  // ===== レンダリング =====
+  function render() {
+    const filtered = currentFilter === 'ALL'
+      ? allTools.map((t,i) => ({...t, _i:i}))
+      : allTools.map((t,i) => ({...t, _i:i})).filter(t => t.category === currentFilter);
+
+    const container = document.getElementById('tool-container');
+    const empty     = document.getElementById('empty-state');
+    const cl        = document.getElementById('count-label');
+    container.innerHTML = '';
+
+    if (filtered.length === 0) {
+      empty.style.display = 'block';
+      document.getElementById('empty-msg').textContent = allTools.length === 0
+        ? 'まだツールがありません。「＋ ツールを追加」から登録しましょう！'
+        : '該当するツールが見つかりませんでした';
+      cl.textContent = '';
+      return;
+    }
+    empty.style.display = 'none';
+    cl.textContent = `${filtered.length} 件のツール`;
+
+    filtered.forEach(tool => {
+      const authorHtml = tool.author
+        ? `<div class="card-author">
+            <span style="opacity:.7">追加者：</span>${
+              tool.profileUrl
+                ? `<a href="${escHtml(tool.profileUrl)}" target="_blank" rel="noopener">👤 ${escHtml(tool.author)}</a>`
+                : `<span>👤 ${escHtml(tool.author)}</span>`
+            }</div>`
+        : '';
+      const card = document.createElement('div');
+      card.className = 'tool-card';
+      card.innerHTML = `
+        <div class="card-body">
+          <div class="card-title">${escHtml(tool.title)}</div>
+          <div class="card-memo">${escHtml(tool.memo || '')}</div>
+          ${authorHtml}
+        </div>
+        <div class="card-footer">
+          <span class="cat-tag" data-cat="${escHtml(tool.category)}">${escHtml(tool.category)}</span>
+          <div class="card-actions">
+            <a class="open-btn" href="${escHtml(tool.url)}" target="_blank" rel="noopener noreferrer">開く ↗</a>
+            <button class="icon-btn" title="編集" onclick="openEdit(${tool._i})">✏️</button>
+            <button class="icon-btn danger" title="削除" onclick="deleteItem(${tool._i})">🗑️</button>
+          </div>
+        </div>`;
+      container.appendChild(card);
+    });
+  }
+
+  // ===== 追加モーダル =====
+  function openModal() {
+    editIndex = -1;
+    document.getElementById('modal-title').textContent = 'ツールを追加';
+    document.getElementById('modal-save-btn').textContent = '追加する';
+    ['f-title','f-memo','f-url','f-author','f-profile'].forEach(id =>
+      document.getElementById(id).value = ''
+    );
+    document.getElementById('f-cat').value = '';
+    document.getElementById('modal-overlay').classList.add('open');
+    setTimeout(() => document.getElementById('f-title').focus(), 80);
+  }
+
+  // ===== 編集モーダル =====
+  function openEdit(index) {
+    editIndex = index;
+    const t = allTools[index];
+    document.getElementById('modal-title').textContent = 'ツールを編集';
+    document.getElementById('modal-save-btn').textContent = '保存する';
+    document.getElementById('f-title').value   = t.title;
+    document.getElementById('f-memo').value    = t.memo || '';
+    document.getElementById('f-url').value     = t.url;
+    document.getElementById('f-cat').value     = t.category;
+    document.getElementById('f-author').value  = t.author || '';
+    document.getElementById('f-profile').value = t.profileUrl || '';
+    document.getElementById('modal-overlay').classList.add('open');
+    setTimeout(() => document.getElementById('f-title').focus(), 80);
+  }
+
+  function closeModal(id) {
+    document.getElementById(id).classList.remove('open');
+  }
+  function overlayClick(e, id) {
+    if (e.target === document.getElementById(id)) closeModal(id);
+  }
+
+  // ===== 保存 =====
+  async function saveItem() {
+    const title      = document.getElementById('f-title').value.trim();
+    const memo       = document.getElementById('f-memo').value.trim();
+    const url        = document.getElementById('f-url').value.trim();
+    const cat        = document.getElementById('f-cat').value;
+    const author     = document.getElementById('f-author').value.trim();
+    const profileUrl = document.getElementById('f-profile').value.trim();
+
+    if (!title) { alert('タイトルを入力してください'); return; }
+    if (!url)   { alert('URLを入力してください'); return; }
+    if (!cat)   { alert('カテゴリを選択してください'); return; }
+
+    const item = { title, memo, url, category: cat, author, profileUrl };
+    const btn = document.getElementById('modal-save-btn');
+    btn.disabled = true;
+    btn.textContent = '保存中...';
+
+    if (editIndex === -1) {
+      allTools.push(item);
+    } else {
+      allTools[editIndex] = item;
+    }
+
+    const ok = await saveToCloud();
+    btn.disabled = false;
+    btn.textContent = editIndex === -1 ? '追加する' : '保存する';
+
+    if (ok) {
+      showToast(editIndex === -1 ? '✅ ツールを追加しました' : '✅ ツールを更新しました');
+      closeModal('modal-overlay');
+      render();
+    } else {
+      showToast('❌ 保存に失敗しました。再度お試しください');
+      // ロールバック
+      if (editIndex === -1) allTools.pop();
+    }
+  }
+
+  // ===== 削除 =====
+  async function deleteItem(index) {
+    if (!confirm(`「${allTools[index].title}」を削除しますか？`)) return;
+    const backup = [...allTools];
+    allTools.splice(index, 1);
+    render();
+    const ok = await saveToCloud();
+    if (ok) {
+      showToast('🗑️ 削除しました');
+    } else {
+      allTools = backup;
+      render();
+      showToast('❌ 削除に失敗しました');
+    }
+  }
+
+  // ===== セットアップ =====
+  function openSetup() {
+    const isFirst = !cfg || !cfg.binId;
+    document.getElementById('setup-guide').style.display = isFirst ? '' : 'none';
+    if (cfg) {
+      document.getElementById('s-binid').value = cfg.binId || '';
+      document.getElementById('s-key').value   = cfg.masterKey || '';
+      // 参加コード表示
+      const code = btoa(JSON.stringify(cfg));
+      document.getElementById('s-joincode').value = code;
+      document.getElementById('generated-code').value = code;
+      document.getElementById('generated-code-wrap').style.display = '';
+    } else {
+      document.getElementById('s-joincode').value = '';
+      document.getElementById('s-binid').value = '';
+      document.getElementById('s-key').value   = '';
+      document.getElementById('generated-code-wrap').style.display = 'none';
+    }
+    document.getElementById('setup-overlay').classList.add('open');
+  }
+
+  function saveSetup() {
+    const joinCode = document.getElementById('s-joincode').value.trim();
+    const binId    = document.getElementById('s-binid').value.trim();
+    const masterKey= document.getElementById('s-key').value.trim();
+
+    let newCfg = null;
+
+    // 参加コードが入力されている場合はそちらを優先
+    if (joinCode) {
+      try {
+        newCfg = JSON.parse(atob(joinCode));
+        if (!newCfg.binId) throw new Error();
+      } catch(e) {
+        alert('参加コードが正しくありません。管理者に再確認してください。');
+        return;
+      }
+    } else if (binId && masterKey) {
+      newCfg = { binId, masterKey };
+      // 参加コード生成・表示
+      const code = btoa(JSON.stringify(newCfg));
+      document.getElementById('generated-code').value = code;
+      document.getElementById('generated-code-wrap').style.display = '';
+      document.getElementById('s-joincode').value = code;
+      showToast('✅ 参加コードを生成しました。コピーして仲間に共有してください！');
+    } else {
+      alert('参加コード、またはBIN IDとMaster Keyを入力してください。');
+      return;
+    }
+
+    cfg = newCfg;
+    localStorage.setItem(CONFIG_KEY, btoa(JSON.stringify(cfg)));
+    closeModal('setup-overlay');
+    showToast('✅ 接続設定を保存しました');
+    loadData();
+  }
+
+  function copyJoinCode() {
+    const code = document.getElementById('generated-code').value;
+    navigator.clipboard.writeText(code).then(() => showToast('📋 参加コードをコピーしました！'));
+  }
+
+  // ===== ユーティリティ =====
+  function setSyncBadge(type, text) {
+    const el = document.getElementById('sync-badge');
+    el.className = 'sync-badge' + (type === 'ok' ? '' : ` ${type}`);
+    document.getElementById('sync-text').textContent = text;
+  }
+
+  function showToast(msg) {
+    const el = document.getElementById('toast');
+    el.textContent = msg;
+    el.classList.add('show');
+    clearTimeout(el._t);
+    el._t = setTimeout(() => el.classList.remove('show'), 3000);
+  }
+
+  function showEmpty(msg) {
+    document.getElementById('empty-state').style.display = 'block';
+    document.getElementById('empty-msg').textContent = msg;
+    document.getElementById('count-label').textContent = '';
+  }
+
+  function escHtml(s) {
+    return String(s||'')
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+      .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      closeModal('modal-overlay');
+      closeModal('setup-overlay');
+    }
+  });
+</script>
+</body>
+</html>
