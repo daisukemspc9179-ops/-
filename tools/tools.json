@@ -1,0 +1,32 @@
+[
+  {
+    "title": "配達ルート最適化ツール",
+    "memo": "複数の配達先を入力すると、効率的なルート順を自動で並び替えます。Googleマップリンク付き。",
+    "url": "https://example.github.io/delivery-route",
+    "category": "仕事・副業系"
+  },
+  {
+    "title": "シフト管理カレンダー",
+    "memo": "月ごとのシフトを入力・管理できるカレンダーツール。合計時間と収入の自動計算機能付き。",
+    "url": "https://example.github.io/shift-calendar",
+    "category": "仕事・副業系"
+  },
+  {
+    "title": "投資損益シミュレーター",
+    "memo": "株・投信・暗号資産の取得単価と現在価格を入力すると、損益・損益率をリアルタイムで計算します。",
+    "url": "https://example.github.io/investment-calc",
+    "category": "投資・お金系"
+  },
+  {
+    "title": "家計簿ダッシュボード",
+    "memo": "収支をカテゴリ別に記録し、月ごとのグラフで可視化。CSVエクスポート対応。",
+    "url": "https://example.github.io/household-budget",
+    "category": "生活・家庭系"
+  },
+  {
+    "title": "ランダムゲームセレクター",
+    "memo": "持っているゲームリストを登録して、今日遊ぶゲームをランダムで決定してくれるツール。",
+    "url": "https://example.github.io/game-selector",
+    "category": "エンタメ・ゲーム系"
+  }
+]
