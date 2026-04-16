@@ -467,7 +467,7 @@
           <button id="btn-card" class="active" onclick="setView('card')">⊞</button>
           <button id="btn-list" onclick="setView('list')">☰</button>
         </div>
-        <button class="btn btn-icon" title="設定" onclick="openSetup()">ښ�️</button>
+        <button class="btn btn-icon" title="設定" onclick="openSetup()">⚙️</button>
       </div>
     </div>
     <div class="filters">
@@ -564,7 +564,7 @@
           <div class="setup-step">
             <div class="num">1</div>
             <div class="text">
-              <a href="https://jsonbin.io" target="_blank">jsonbin.io</a> にアクセスして無料アクウンドを作成
+              <a href="https://jsonbin.io" target="_blank">jsonbin.io</a> にアクセスして無料アクウントを作成
             </div>
           </div>
           <div class="setup-step">
@@ -597,7 +597,7 @@
       <!-- 参加コードで接続 -->
       <div class="field">
         <label>参加コード <span class="req">*</span></label>
-        <input type="text" id="s-joincode" placeholder="管理者から共有しれた参加コードを貼り付け" />
+        <input type="text" id="s-joincode" placeholder="管理者から共有された参加コードを貼り付け" />
         <div class="hint">管理者から共有された参加コードを入力してください</div>
       </div>
 
@@ -651,18 +651,9 @@
 
   // ===== 初期化 =====
   (function init() {
-    const raw = localStorage.getItem(CONFIG_KEY);
-    if (raw) {
-      try { cfg = JSON.parse(atob(raw)); } catch(e) {}
-    }
-    if (!cfg || !cfg.binId) {
-      setSyncBadge('error', '未接続');
-      document.getElementById('loading-state').style.display = 'none';
-      showEmpty('⚙️ まず右上の設定ボタンから接続設定をしてください');
-      openSetup();
-    } else {
-      loadData();
-    }
+    // BIN ID と Master Key を直接埋め込み（URLを開くだけで自動接続）
+    cfg = { binId: '69e00ba036566621a8b9c0d5', masterKey: '$2a$10$HmaBdvcaClJAVsACIPmD3OmfXbyQwtKQsBrF7zLt5BHUnBEKckjD.' };
+    loadData();
   })();
 
   // ===== データ読み込み =====
